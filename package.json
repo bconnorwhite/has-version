@@ -1,0 +1,53 @@
+{
+  "name": "has-version",
+  "version": "1.0.0",
+  "description": "Check if NPM has the version of a given package",
+  "license": "MIT",
+  "author": {
+    "name": "Connor White",
+    "email": "connor.bcw@gmail.com",
+    "url": "https://connorwhite.org"
+  },
+  "homepage": "https://connorwhite.org/has-version",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bconnorwhite/has-version.git"
+  },
+  "keywords": [
+    "has",
+    "version",
+    "npm",
+    "check",
+    "if",
+    "exists",
+    "package"
+  ],
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "bob build",
+    "commit": "bob commit",
+    "lint": "bob lint",
+    "release": "bob release",
+    "test": "bob test"
+  },
+  "dependencies": {
+    "cross-fetch-json": "^1.1.2"
+  },
+  "devDependencies": {
+    "@bconnorwhite/bob": "^2.7.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-bob"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "bob lint commit"
+    }
+  },
+  "npmpackagejsonlint": {
+    "extends": "npm-package-json-lint-config-bob"
+  }
+}
